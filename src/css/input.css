@@ -1,13 +1,22 @@
 @import "tailwindcss";
 
 @theme {
-    --color-blueyes: #1F409F;
-    --color-greyyes: #1E1E1E;
-    --color-blackyes: #211B29;
-    --color-backtext: #1A1D26;
-    --color-blueback: #535264;
-    --color-outline: #4E4C61;
-    --color-yellow: #525163;
+    --color-pink: #FD2A91;
+    --color-pinklight: #FD59AE;
+    --color-pinksoft: #FE9BBD;
+
+    --color-blue: #3BC3E9;
+    --color-bluelight: #8BDEF3;
+    --color-bluedark: #2D4DB5;
+
+    --color-purple: #3A319A;
+    --color-purplelight: #B653AD;
+    --color-purpledark: #7D2F9D;
+
+    --color-yellow: #F9FB7B;
+
+    --color-white: #FEFDFF;
+    --color-cream: #FDAFC7;
 }
 
 .bitcount-grid-double {

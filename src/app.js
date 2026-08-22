@@ -1,29 +1,29 @@
 gsap.registerPlugin(Draggable);
 
-Draggable.create("#panel", {
+const panels = gsap.utils.toArray(".panel");
+
+gsap.set(panels, {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    xPercent: -50,
+    yPercent: -50,
+    y: "-300%",
+    opacity: 0
+});
+
+panels.forEach((panel, index) => {
+    gsap.to(panel, {
+        x: index * 35,
+        y: index * 35,
+        opacity: 1,
+        duration: 1,
+        delay: index * 0.15,
+        ease: "bounce.out"
+    });
+});
+
+Draggable.create(".panel", {
     type: "x,y",
-    bounds: document.body,
-})
-
-gsap.set("#panel", {
-    y:"-300%"
-})
-
-gsap.set("#text > *", {
-    opacity :0,
-    y: "-10px",
-})
-
-gsap.to("#panel", {
-    y: "0",
-    duration: 1,
-    ease: "bounce"
-})
-
-gsap.to("#text > *", {
-    delay:0.7,
-    y:0,
-    opacity:1,
-    duration: 0.5,
-    stagger: 0.3
-})
+    bounds: document.body
+});
